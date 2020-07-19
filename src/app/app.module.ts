@@ -12,6 +12,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
 import { HeaderComponent } from './posts/header/header.component';
 import { PostListComponent } from './posts/post-lists/post-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -32,7 +33,8 @@ import { PostListComponent } from './posts/post-lists/post-list.component';
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
 
   ],
   providers: [],
