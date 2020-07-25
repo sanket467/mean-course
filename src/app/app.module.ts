@@ -15,6 +15,7 @@ import { HeaderComponent } from './posts/header/header.component';
 import { PostListComponent } from './posts/post-lists/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -38,7 +39,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatInputModule,
     HttpClientModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],
