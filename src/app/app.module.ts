@@ -17,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {LoginComponent} from 'src/app/auth/login/login.component'
+import {LoginComponent} from 'src/app/auth/login/login.component';
+import {SignupComponent} from 'src/app/auth/signup/signup.component';
 
 
 
@@ -28,7 +29,8 @@ import {LoginComponent} from 'src/app/auth/login/login.component'
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
