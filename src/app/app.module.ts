@@ -13,12 +13,13 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
 import { HeaderComponent } from './posts/header/header.component';
 import { PostListComponent } from './posts/post-lists/post-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {LoginComponent} from 'src/app/auth/login/login.component';
 import {SignupComponent} from 'src/app/auth/signup/signup.component';
+import {AuthInterceptor} from 'src/app/auth/auth-interceptor';
 
 
 
@@ -50,7 +51,7 @@ import {SignupComponent} from 'src/app/auth/signup/signup.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
